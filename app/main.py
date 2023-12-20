@@ -18,7 +18,11 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to FastAPIs!"}
+    return {"message": "Welcome to Regie's FastAPIs!"}
+
+@app.get("/favicon.ico")
+def favicon():
+    return {"message": "Regie's Favicon!"}
 
 
 app.include_router(auth.router)
