@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# init_db()
+init_db()
 
 
 @app.get("/")
