@@ -12,8 +12,8 @@ import psycopg2
 # access to the values within the .ini file in use.
 config = context.config
 # config.set_main_option("sqlalchemy.url", f"postgresql+psycopg2://{settings.user}:{settings.password}@{settings.host}:{settings.port}/{settings.database_name}")
-conn = psycopg2.connect(settings.database_url, sslmode='require')
-conn.autocommit = True
+# conn = psycopg2.connect(settings.database_url, sslmode='require')
+# conn.autocommit = True
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
