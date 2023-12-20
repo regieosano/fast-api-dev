@@ -6,11 +6,14 @@ from sqlalchemy import pool
 from alembic import context
 from models.classes import Base
 from config.config_settings import settings
+import psycopg2
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-config.set_main_option("sqlalchemy.url", f"postgresql+psycopg2://{settings.user}:{settings.password}@{settings.host}:{settings.port}/{settings.database_name}", sslmode='require')
+# config.set_main_option("sqlalchemy.url", f"postgresql+psycopg2://{settings.user}:{settings.password}@{settings.host}:{settings.port}/{settings.database_name}")
+conn = psycopg2.connect(settings.database_url, sslmode='require')
+conn.autocommit = True
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
