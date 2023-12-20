@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "blog-connection",
+            "database": "blog-db",
+            "username": "regie30",
+            "password": "rgoGW0:Qr302+x]"
+        }
+    ]
+}
