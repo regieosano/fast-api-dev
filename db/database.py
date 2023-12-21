@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from config.config_settings import settings
 
 
-SQL_ALCHEMY_DB_URL = f"postgres://{settings.user}:{settings.password}@{
+SQL_ALCHEMY_DB_URL = f"postgresql://{settings.user}:{settings.password}@{
     settings.host}:{settings.port}/{settings.database_name}"
 
 Base = declarative_base()
