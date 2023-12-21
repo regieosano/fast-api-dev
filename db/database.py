@@ -4,7 +4,7 @@ from config.config_settings import settings
 
 
 SQL_ALCHEMY_DB_URL = f"postgresql://{settings.user}:{settings.password}@{
-    settings.host}:{settings.port}/{settings.database_name}"
+    settings.host}:{settings.port}/{settings.database_name}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
 
 Base = declarative_base()
 
