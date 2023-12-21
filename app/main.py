@@ -13,7 +13,6 @@ app.add_middleware(
     allow_headers=['*'],
 )
 
-app.host = "0.0.0.0"
 
 # init_db()
 
