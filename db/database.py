@@ -2,9 +2,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from config.config_settings import settings
 
+ssl_string = "ssl=true" 
 
 SQL_ALCHEMY_DB_URL = f"postgresql://{settings.user}:{settings.password}@{
-    settings.host}:{settings.port}/{settings.database_name}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
+    settings.host}:{settings.port}/{settings.database_name}"
 
 Base = declarative_base()
 
