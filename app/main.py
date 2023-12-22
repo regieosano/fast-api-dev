@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 
-# init_db()
+init_db()
 
 
 @app.get("/")
