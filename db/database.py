@@ -3,10 +3,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from config.config_settings import settings
 
 
-ssl_string = "ssl=true" 
+ssl_string = "sslmode=require" 
 
 SQL_ALCHEMY_DB_URL = f"postgresql://{settings.user}:{settings.password}@{
-    settings.host}:{settings.port}/{settings.database_name}"
+    settings.host}:{settings.port}/{settings.database_name}?{ssl_string}"
 
 Base = declarative_base()
 
